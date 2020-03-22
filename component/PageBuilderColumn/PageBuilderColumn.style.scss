@@ -1,0 +1,17 @@
+$page-builder-screen-m: 768px;
+
+.pagebuilder-column {
+  box-sizing: border-box;
+  padding: 0 !important;
+
+  figure {
+    margin: 10px !important;
+  }
+}
+
+@media only screen and (max-width: $page-builder-screen-m) {
+  .pagebuilder-column {
+    background-attachment: scroll !important;
+    flex-basis: 100%;
+  }
+}

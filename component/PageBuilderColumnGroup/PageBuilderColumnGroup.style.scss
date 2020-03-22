@@ -1,0 +1,12 @@
+[data-content-type='column-group'] {
+  flex-flow: wrap;
+
+  .pagebuilder-column {
+    @include tablet {
+      width: 50% !important;
+    }
+    @include mobile {
+      width: 100% !important;
+    }
+  }
+}

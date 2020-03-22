@@ -1,0 +1,48 @@
+$page-builder-button-color-blue1: #1979c3;
+$page-builder-button-color-blue2: #006bb4;
+$page-builder-button-color-white: #fff;
+$page-builder-font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+[data-content-type='button-item'] {
+  max-width: 100%;
+
+  [data-element='link'],
+  [data-element='empty_link'] {
+    max-width: 100%;
+    word-wrap: break-word;
+  }
+
+  [data-element='empty_link'] {
+    cursor: default;
+  }
+}
+
+a,
+button,
+div {
+  &.pagebuilder-button-primary,
+  &.pagebuilder-button-secondary {
+    background: $page-builder-button-color-blue1;
+    background-image: none;
+    border: 1px solid $page-builder-button-color-blue1;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: $page-builder-button-color-white;
+    display: inline-block;
+    font-family: $page-builder-font-family;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 2.2rem;
+    margin: 0 10px 10px 0;
+    padding: 14px 17px;
+    text-decoration: none;
+    vertical-align: middle;
+
+    &:hover,
+    &:active {
+      background: $page-builder-button-color-blue2;
+      border: 1px solid $page-builder-button-color-blue2;
+      cursor: default;
+    }
+  }
+}

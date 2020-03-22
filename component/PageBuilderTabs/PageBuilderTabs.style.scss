@@ -1,0 +1,115 @@
+$page-builder-screen-m: 768px;
+$page-builder-color-white: #fff;
+$page-builder-color-black: #000;
+$page-builder-tabs-color-gray80: #ccc;
+$page-builder-color-gray-light0: #f6f6f6;
+
+[data-content-type='tabs'] {
+  .tabs-navigation {
+    display: block;
+    font-size: 0;
+    margin: 0 0 -1px;
+    padding: 0;
+
+    li {
+      &:first-child {
+        margin-left: 0 !important;
+      }
+
+      &:before {
+        content: none;
+      }
+
+      &.tab-header {
+        background: $page-builder-color-gray-light0;
+        border: 1px solid $page-builder-tabs-color-gray80;
+        border-bottom: 0;
+        border-bottom-left-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+        display: inline-block;
+        margin: 0;
+        max-width: 100%;
+        overflow-wrap: break-word;
+        padding: 0;
+        position: relative;
+        word-wrap: break-word;
+        z-index: 1;
+
+        &:not(:first-child) {
+          margin-left: -1px;
+        }
+
+        a {
+          &.tab-title {
+            border-right: 0;
+            color: $page-builder-color-black;
+            cursor: pointer !important;
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 1.4rem 2rem;
+            position: relative;
+            transition: 3s;
+            white-space: normal;
+
+            span {
+              &.tab-title {
+                display: block;
+              }
+            }
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+
+        &:last-child {
+          border-right: 1px solid $page-builder-tabs-color-gray80;
+        }
+
+        &.ui-state-active {
+          background: $page-builder-color-white;
+          z-index: 19;
+
+          a {
+            &.tab-title {
+              position: relative;
+              transition: 3s;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .tabs-content {
+    border: 1px solid $page-builder-tabs-color-gray80;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    z-index: 9;
+
+    [data-content-type='tab-item'] {
+      box-sizing: border-box;
+      min-height: inherit;
+    }
+  }
+
+  &.tab-align-left {
+    .tabs-content {
+      border-top-left-radius: 0 !important;
+    }
+  }
+
+  &.tab-align-right {
+    .tabs-content {
+      border-top-right-radius: 0 !important;
+    }
+  }
+}
+
+@media only screen and (max-width: $page-builder-screen-m) {
+  [data-content-type='tab-item'] {
+    background-attachment: scroll !important;
+  }
+}

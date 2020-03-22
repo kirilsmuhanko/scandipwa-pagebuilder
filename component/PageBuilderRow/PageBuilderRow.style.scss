@@ -1,0 +1,43 @@
+$page-builder-screen-m: 768px;
+$page-builder-layout-max-width: 1280px;
+
+[data-content-type='row'] {
+  &[data-appearance='contained'] {
+    box-sizing: border-box;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: $page-builder-layout-max-width;
+
+    [data-element='inner'] {
+      box-sizing: border-box;
+
+      @media only screen and (max-width: $page-builder-screen-m) {
+        background-attachment: scroll !important;
+      }
+    }
+  }
+
+  &[data-appearance='full-bleed'] {
+    box-sizing: border-box;
+
+    @media only screen and (max-width: $page-builder-screen-m) {
+      background-attachment: scroll !important;
+    }
+  }
+
+  &[data-appearance='full-width'] {
+    box-sizing: border-box;
+
+    > .row-full-width-inner {
+      box-sizing: border-box;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: $page-builder-layout-max-width;
+      width: 100%;
+    }
+
+    @media only screen and (max-width: $page-builder-screen-m) {
+      background-attachment: scroll !important;
+    }
+  }
+}
